@@ -1,0 +1,30 @@
+{
+  "manifest_version": 2,
+  "name": "God mode activated",
+  "version": "1.0",
+  "description": "An extension that automates following users on instagram and scrapes their data",
+  "permissions": [
+    "https://www.instagram.com/*",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Follow and Scrape",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "manifest_key": "value"
